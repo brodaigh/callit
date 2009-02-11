@@ -1,0 +1,12 @@
+!!! Strict
+%html{"xml:lang" => "en", :lang => "en", :xmlns => "http://www.w3.org/1999/xhtml"}
+  %head
+    %meta{:content => "text/html; charset=utf-8", "http-equiv" => "Content-Type"}/
+    %title Call It!
+    %link{:href => versioned_stylesheet('style'), :media => "screen", :rel => "stylesheet", :type => "text/css"}/
+  %body
+    %a{:href => '/'}
+      %img.logo{:src => '/logo.png'}
+    = yield
+    #footer
+      %small ©Callit. Created by Madchen Lynch and Brodaigh Lynch. Open to suggestions @ Github. Feedback @ brodaigh at gmail dot com.

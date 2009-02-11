@@ -1,0 +1,49 @@
+%p 
+  This is a computerized version of 
+  %u 
+    %b fill in the gap
+  \.  You would have done these at school some time.
+  Call It's called 'Call It' because I asked my daughter what we should call it and immediately found  
+  the answer within the question.
+%h2 Fill in each box with a word corresponding to it's speech type.
+%form{:method => "post", :action => "/stories/create"}
+  #fake
+    .unit
+      %input{:name => "story_verb", :type => "text", :value => ""}
+      %br
+      .example.verb 
+        %label Verb
+        %small eg. smell, attach, run, borrow, crawl, decorate, frighten.
+    .unit
+      %input{:name => "story_adverb", :type => "text", :value => ""}
+      %br
+      .example.adverb 
+        %label Adverb
+        %small eg.  swiftly, happily, overhead, twice, outside, recently, joyfully.
+    .unit
+      %input{:name => "story_noun", :type => "text", :value => ""}
+      %br
+      .example.noun 
+        %label Noun
+        %small rainstorm, donkey, summer, swing, vegetable, jeans, pancake, kitten.
+    .unit
+      %input{:name => "story_proper_noun", :type => "text", :value => ""}
+      %br
+      .example.proper_noun 
+        %label Proper Noun
+        %small Your name is a proper noun so is your pets name. 
+    .unit
+      %input{:name => "story_pronoun", :type => "text", :value => ""}
+      %br
+      .example.pronoun 
+        %label Pronoun
+        %small eg. all, him, many, which, they, whose, most, more, mine.
+    .unit
+      %input{:name => "story_adjective", :type => "text", :value => ""}
+      %br
+      .example.adjective 
+        %label Adjective
+        %small awesome, big, crazy, obedient, purple, pretty, scared, unnatural.
+      %input{:name => "story_partial", :type => "hidden", :value => random_partial}
+  %button{:type => "submit"}
+    When you've filled in the boxes click on me and we'll turn your words into a story.#pictures
