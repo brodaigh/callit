@@ -31,14 +31,7 @@ get '/' do
 end
 
 post "/stories/create" do
-  @story = Story.create(
-     :verb => params[:story_verb],
-     :adverb => params[:story_adverb],
-     :noun => params[:story_noun],
-     :proper_noun => params[:story_proper_noun],
-     :pronoun => params[:story_pronoun],
-     :adjective => params[:story_adjective],
-     :partial => params[:story_partial])
+  @story = Story.create(Hash[*params.collect {|k,v| [k.to_s.gsub('story_', ''), v] }.flatten])
   if @story.save
     redirect "/#{@story.id}"
   else
